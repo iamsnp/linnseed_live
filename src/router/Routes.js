@@ -1,10 +1,14 @@
 import React from "react";
 
-import LinnseedMain from '../components/views/linnseedMain';
+import LinnseedMain from "../components/views/linnseedMain";
 
 import NotFound from "../views/NotFound";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ScrollTopBehaviour from "../components/ScrollTopBehaviour";
+import AboutLinnseed from "../views/inner-pages/pages/about/aboutLinnseed";
+import ContactLinnseed from "../views/inner-pages/pages/contact/contactLinnseed";
+import Login from "../views/inner-pages/pages/miscellaneous/Login";
+import SignUp from "../views/inner-pages/pages/miscellaneous/SignUp";
 
 const Routes = () => {
   return (
@@ -12,10 +16,9 @@ const Routes = () => {
       <Router>
         <ScrollTopBehaviour />
         <Switch>
-          
-          <Route exact path="/"  component={LinnseedMain} /> 
+          <Route exact path="/" component={LinnseedMain} />
           {/* <Route path="/priview-main" component={PreviewMain} />  */}
-          <Route path="/linnseed-main" component={LinnseedMain} /> 
+          <Route path="/linnseed-main" component={LinnseedMain} />
           {/* <Route path="/event-organizer" component={EventOrganizer} />
           <Route path="/doc-landing" component={DocLanding} />
           <Route path="/doc-signature" component={DocSignatureLanding} />
@@ -50,9 +53,9 @@ const Routes = () => {
           <Route path="/contact-eo" component={ContactEventOrganizer} />
           <Route path="/contact-pm" component={ContactProjectManagement} />
           <Route path="/contact-doc" component={ContactDocumentation} /> */}
-          {/* <Route path="/contact-linn" component={ContactLinnseed} /> */}
+          <Route path="/contact-linn" component={ContactLinnseed} />
           {/* about us inner pages */}
-          {/* <Route path="/about-linn" component={AboutLinnseed} /> */}
+          <Route path="/about-linn" component={AboutLinnseed} />
           {/* <Route path="/about-cs" component={AboutCustomerSupport} />
           <Route path="/about-eo" component={AboutEventOrganizer} />
           <Route path="/about-pm" component={AboutProjectManagement} />
@@ -63,8 +66,8 @@ const Routes = () => {
           <Route path="/pricing-pm" component={PricingProjectManagement} /> */}
 
           {/* Feature Dropdown Routes */}
-          {/* <Route path="/login" component={Login} /> */}
-          {/* <Route path="/SignUp" component={SignUp} /> */}
+          <Route path="/login" component={Login} />
+          <Route path="/SignUp" component={SignUp} />
           {/* <Route path="/terms-conditions" component={TermsConditions} />
           <Route path="/solution-management" component={SolutionMangement} />
           <Route
